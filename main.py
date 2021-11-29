@@ -13,7 +13,13 @@ else:
  lvl = float(10000 + rel)
  boostery =  float(lvl / 1000000)
 
-print("Na ten konkretny level będziesz potrzebował: " + (str(boostery)) + " boosterów")
+print("Na ten konkretny level będziesz potrzebował ok.: " + (str(boostery)) + " boosterów")
+
+tnt = boostery * 30.59
+
+
+print("Będzie to " + str(round(tnt,2)) + "zł na ten konkretny lvl, jeżeli kupisz TNT games boostery")
+
 
 input()
 
