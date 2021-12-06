@@ -1,3 +1,3 @@
 Boostery bez przeceny
-Według hypixel forums: jeden booster daje ok.1mln exp
+According to hypixel forums
 cdn

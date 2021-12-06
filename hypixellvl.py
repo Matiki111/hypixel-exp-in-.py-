@@ -1,16 +1,18 @@
+import time
+
 poziom = int(input("Jaki poziom hypixela cię interesuje?: "))
+
+for sekundy in range(3,0,-1):
+    print(sekundy)
+    time.sleep(1)
 
 mnoznik2 = poziom - 2
 rel = 2500 * mnoznik2
 lvl = float(10000 + rel)
-boostery = float(lvl / 1000000)
 
-cls = boostery * 50.57
-bsg = boostery * 75.88
-uhc = boostery * 60.69
-war = boostery * 45.51
-cvc = boostery * 40.44
-tnt = boostery * 30.32
+
+
+
 
 questysw = float(lvl / 3000)
 questybw = float(lvl / 3500)
@@ -22,6 +24,7 @@ questytkr = float(lvl / 4200)
 # poziom - poziom ktory osoba wpisuje
 # mnoznik2- poziom ktory osoba wpisuje odjety od 2(poziom 0 nie istnieje,a 1 nie ma wymaganej ilosci expa)
 # lvl- ilosc expa na DANY poziom
+# questy- ilosc questow na DANY poziom
 
 if poziom == 1:
     print("Exp, który będziesz potrzebował, aby osiągnąć ten poziom to: 0")
@@ -35,6 +38,36 @@ else:
     interes = int(input("Napisz 1, jeżeli cie interesują boosterki, 2 jeżeli questy: "))
 
     if interes == 1:
+        ilosc_osob = int(input("Ile osób będzie na hypixelu w trakcie aktywowania boostera?\n"
+                               "1- 60k\n"
+                               "2- 70k\n"
+                               "3- 80k\n"
+                               "4- 90k\n"
+                               "5- 100k\n"
+                               "6- 110k\n "))
+        if ilosc_osob == 1:
+            xp = 740000
+        elif ilosc_osob == 2:
+            xp = 1070000
+        elif ilosc_osob == 3:
+            xp = 1400000
+        elif ilosc_osob == 4:
+            xp = 1730000
+        elif ilosc_osob == 5:
+            xp = 2060000
+        elif ilosc_osob == 6:
+            xp = 2400000
+        else:
+            print("Prosze mnie tu nie scamowac!")
+
+
+        boostery = float(lvl / xp)
+        cls = boostery * 50.57
+        bsg = boostery * 75.88
+        uhc = boostery * 60.69
+        war = boostery * 45.51
+        cvc = boostery * 40.44
+        tnt = boostery * 30.32
         print("Na ten konkretny level będziesz potrzebował ok.: " + (str(round(boostery,2))) + " boostera")
 
 
